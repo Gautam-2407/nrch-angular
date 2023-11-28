@@ -1,13 +1,14 @@
 /* src/app/components/sidebar/sidebar.component.css */
 
 #sidebar {
-    background-color: #111;
+    background-color: #1c1d25;
     display: flex; /* Enable flexbox */
     flex-direction: column; /* Stack children vertically */
     height: 100vh; /* Full height of the viewport */
     align-items: center;
     padding-top:30px ;
     color: white;
+  
   }
   
   #sidebar ul.components {
