@@ -1,0 +1,59 @@
+/* src/app/components/sidebar/sidebar.component.css */
+
+#sidebar {
+    background-color: #111;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    height: 100vh; /* Full height of the viewport */
+    align-items: center;
+    padding-top:30px ;
+    color: white;
+  }
+  
+  #sidebar ul.components {
+    padding: 50px;
+  }
+  
+  #sidebar ul li a {
+    padding: 10px;
+    font-size: 1.2em;
+    display: block;
+    color: white;
+    text-decoration: none;
+    
+  }
+  .my-icon{
+    margin-right: 15px;
+  }
+  #sidebar ul li a:hover {
+    background-color: #555;
+  }
+  
+  #sidebar ul li.active {
+    background-color: #555;
+  }
+  
+  .list-unstyled {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    flex-grow: 1; /* Allow this element to grow to fill space */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove list bullets */
+}
+  .sidebar-header{
+    height: 100px;
+    width: 100px;
+  }
+  .sidebar-header img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .list-unstyled li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.list-unstyled li:last-child {
+    margin-top: auto; /* Push the last item (logout) to the bottom */
+}
