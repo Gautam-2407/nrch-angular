@@ -1,9 +1,11 @@
 const users = require("../models/userSchema");
+const jwt = require("jsonwebtoken");
+const SecretKey = "GAUTAM";
 
 exports.userregister = async (req, res) => {
-    const {name, phone, email, gender }=req.body;
+    const {name, phone, email, gender, password }=req.body;
 
-    if (!name || !phone || !email|| !gender){
+    if (!name || !phone || !email|| !gender || !password) {
       return  res.status(401).json({message:"Fill all fields"})
     }
 
@@ -21,6 +23,7 @@ exports.userregister = async (req, res) => {
           phone,
           email,
           gender,
+          password,
           
         });
         
@@ -47,7 +50,9 @@ exports.userregister = async (req, res) => {
          return res.send("Phone No. not found")
         }
         else {
-          res.status(201).json({ exists: true ,user});
+          const login_token = jwt.sign({username: user.username,},
+            SecretKey);
+          res.status(201).json({ exists: true ,user , token:login_token});
           console.log("Phone No. Match");
         }
       }

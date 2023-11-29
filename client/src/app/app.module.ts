@@ -7,6 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import {
   LucideAngularModule,
   Send,
@@ -38,6 +41,8 @@ import { TwitterComponent } from './pages/twitter/twitter.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     PickerModule,
     LucideAngularModule.pick({ Send, Instagram, Youtube, X, LogOut }),
     NgbModule,
