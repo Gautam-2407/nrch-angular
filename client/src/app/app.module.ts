@@ -19,6 +19,8 @@ import { MessageComponent } from './pages/message/message.component';
 import { PickerModule } from '@ctrl/ngx-emoji-mart'
 import { MessageSidebarComponent } from './pages/message/message-sidebar/message-sidebar.component';
 import { InstagramComponent } from './pages/instagram/instagram.component';
+import { YoutubeComponent } from './pages/youtube/youtube.component';
+import { TwitterComponent } from './pages/twitter/twitter.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { InstagramComponent } from './pages/instagram/instagram.component';
     MessageComponent,
     MessageSidebarComponent,
     InstagramComponent,
+    YoutubeComponent,
+    TwitterComponent,
   ],
   imports: [
     BrowserModule,
